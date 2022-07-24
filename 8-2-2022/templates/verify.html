@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+</head>
+<body>
+<form action="/validate" method="post">
+    <h1>One time opt insert check </h1>
+   
+    Enter OTP: <input type="text" name="otp">
+    <input type="submit" value="Submit">
+</form>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  {% for message in messages %}
+    {{ message }}
+  {% endfor %}
+{% endif %}
+{% endwith %}
+</body>
+
+</html>

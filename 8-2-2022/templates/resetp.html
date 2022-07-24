@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Register</a>
+      <a class="navbar-brand" href="/login">Login</a>
+
+    </nav>
+
+    <!-- MSG if any -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Login</title>
+  </head>
+  <body>
+    <form method="POST" style="padding-top: 50px;">
+    <div class="form-group">
+  <div class="form-group">
+    <label for="pass1">Password</label>
+    <input type="text" class="form-control" id="pass1" name='pass1' placeholder="Enter Password">
+  </div>
+  <div>
+    <label for="pass2">Confirm Password</label>
+    <input type="pass2" class="form-control" id="pass2" name='pass2' placeholder="Confirm Password">
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </body>
+</html>
